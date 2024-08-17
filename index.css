@@ -1,0 +1,196 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4d8f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: left;
+}
+
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: 'Cat-song';
+    src: url('fonts/Cat-song.woff2') format('woff2'),
+         url('fonts/Cat-song.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar fontes específicas */
+.fonte-cat-song {
+    font-family: 'Cat-song', Arial, sans-serif;
+}
+
+.fonte-arial {
+    font-family: Arial, sans-serif;
+}
+
+/* Outros estilos */
+p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para o layout da página */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: left;
+    max-width: 1000px;
+}
+
+#header {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.banner_img {
+    max-width: 70%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo dos botões de redes sociais */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição ao box-shadow */
+}
+
+/* Cores dos botões */
+.social-button.discord {
+    background-color: #5865F2;
+}
+
+.social-button.instagram {
+    background-color: #e1306c;
+}
+
+.social-button.twitter {
+    background-color: #1da1f2;
+}
+
+.social-button.premium {
+    background-color: #083416;
+}
+
+/* Efeito de brilho ao passar o mouse sobre os botões */
+.social-button.discord:hover {
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.6); /* Cor do brilho igual ao botão Discord */
+}
+
+.social-button.instagram:hover {
+    box-shadow: 0 0 10px rgba(225, 48, 108, 0.6); /* Cor do brilho igual ao botão Instagram */
+}
+
+.social-button.twitter:hover {
+    box-shadow: 0 0 10px rgba(29, 161, 242, 0.6); /* Cor do brilho igual ao botão Twitter */
+}
+
+.social-button.premium {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(255, 75, 75), rgb(255, 187, 61), rgb(255, 248, 112), lightgreen, rgb(102, 163, 255), rgb(188, 121, 255), rgb(244, 122, 255));
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  /* Animação de gradiente suave */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+/* Media Queries para dispositivos móveis */
+
+/* Estilos para telas de até 768px (tablets e celulares em paisagem) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alinha as barras laterais e o conteúdo em coluna */
+    }
+
+    .sidebar-left, .sidebar-right {
+        width: 100%; /* As barras laterais ocupam toda a largura disponível */
+        padding: 10px;
+    }
+
+    #main {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #header .banner_img {
+        max-width: 90%; /* Ajusta o banner para se adequar melhor a telas menores */
+    }
+}
+
+/* Estilos para telas de até 480px (celulares em retrato) */
+@media (max-width: 480px) {
+    p {
+        font-size: 16px; /* Reduz o tamanho da fonte para melhor legibilidade em telas pequenas */
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
